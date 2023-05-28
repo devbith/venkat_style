@@ -40,3 +40,5 @@ This will install Quicksilver, create the necessary script file, and set up Vim 
  }
 ```
 3. Run the program using the key *F5* 
+
+<img src="screentshot.png" height="500px">
