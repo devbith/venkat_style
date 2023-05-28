@@ -11,9 +11,9 @@ mkdir -p "$script_dir"
 cat <<EOF > "$script_dir/script.sh"
 #!/bin/bash
 
-j_directory_path=\$(echo \${1} | awk -F '/' -v OFS='/' '\$NF=""; print \$0')
-j_file=\$(echo \${1} | awk -F '/' '{print \$NF}' | sed 's/.java//')
-script_dir=\$(cd "\$(dirname "\${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+file_path="\${1}"
+j_directory_path="\$(dirname "\$file_path")"
+j_file="\$(basename "\$file_path" .java)"
 
 # Compile 
 output=\$(javac -cp ".:\${j_directory_path}/*" \${1} 2>&1) 
