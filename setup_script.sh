@@ -28,7 +28,7 @@ osascript -e "tell application \"Quicksilver\" to show large type \"\$escaped_ou
 EOF
 
 # Step 4: Map the command in Vim
-echo 'noremap <f5> :silent !sh ~/.vim/venkatway/script.sh %:p &<CR>:redraw!<CR>' >> ~/.vimrc
+echo 'noremap <f5> :update \| silent !sh ~/.vim/venkatway/script.sh %:p &<CR>:redraw!<CR>' >> ~/.vimrc
 
 # Step 5: Display completion message
 GREEN='\033[0;32m'
