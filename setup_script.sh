@@ -35,6 +35,4 @@ GREEN='\033[0;32m'
 YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
-echo -e "\n\n\tMapped <F5> key as command in ${YELLOW}Vim${NC} to run the script ~/.vim/venkatway/script.sh"
-
 echo -e "\n\tSetup completed. Your ${YELLOW}Vim${NC} is ready to run & view output of java program in a ${GREEN}Dr.Venkat Subramaniam${NC} style 😎."
