@@ -33,7 +33,7 @@ This will install Quicksilver, create the necessary script file, and set up Vim 
 ```bash
  vim Sample.java
 ```
-2. Add the following
+2. Copy the following code snippet in Sample.java
 
 ``` java
   public class Sample {
@@ -42,6 +42,6 @@ This will install Quicksilver, create the necessary script file, and set up Vim 
   }
  }
 ```
-3. Run the program using the key *F5* 
+3. Run the program using the key <b>F5</b> 
 
 <img src="screentshot.png" height="500px">
