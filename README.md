@@ -25,7 +25,9 @@ The script automates the installation of Quicksilver, a tool that facilitates di
    
 This will install Quicksilver, create the necessary script file, and set up Vim mapping F5 for running Java files.
 
-### Usage
+## Usage
+
+
 1. Open Terminal
 
 ```bash
