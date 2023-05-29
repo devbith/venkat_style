@@ -8,7 +8,7 @@ The script automates the installation of Quicksilver, a tool that facilitates di
 
 ## Setup
 
-1. Open your terminal, copy and run the below code:
+1. Download the setup script. Open Terminal, copy and run the below code:
 
    ```bash
     curl -O https://github.com/devbith/venkat_style/raw/main/setup_script.sh
