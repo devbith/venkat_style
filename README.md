@@ -8,20 +8,10 @@ The script automates the installation of Quicksilver, a tool that facilitates di
 
 ## Setup
 
-1. Download the setup script. Open Terminal, copy and run the below code:
+1. Open Terminal, copy and run the following code:
 
    ```bash
-    curl -O https://raw.githubusercontent.com/devbith/venkat_style/main/setup_script.sh
-  
-2. Make the script executable by running the following command:
-
-   ```bash
-   chmod +x setup_script.sh
-
-3. Run the script by executing the following command:
-  
-   ```bash
-   ./setup_script.sh
+    curl -O https://raw.githubusercontent.com/devbith/venkat_style/main/setup_script.sh && chmod +x setup_script.sh && ./setup_script.sh
    
 This will install Quicksilver, create the necessary script file, and set up Vim mapping F5 for running Java files.
 
