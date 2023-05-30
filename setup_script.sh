@@ -19,12 +19,14 @@ j_file="\$(basename "\$file_path" .java)"
 output=\$(javac -cp ".:\${j_directory_path}/*" \${1} 2>&1) 
 
 # Run if compiled
-if [ \$? -eq 0 ]; then
-  output=\$(java -cp ".:\${j_directory_path}/" \${j_file} 2>&1)
+if [ $? -eq 0 ]; then
+  output=""
+  java -cp ".:${j_directory_path}/" ${j_file} 2>&1 | while IFS= read -r line; do
+    escaped_line=$(printf "%s" "$line" | sed 's/"/\\"/g')
+    output="$output$line\n"
+    osascript -e "tell application \"Quicksilver\" to show large type \"$output\""
+  done
 fi
-
-escaped_output=\$(printf "%s" "\$output" | sed 's/"/\\"/g')
-osascript -e "tell application \"Quicksilver\" to show large type \"\$escaped_output\""
 EOF
 
 # Step 4: Map the command in Vim
