@@ -26,6 +26,9 @@ if [ $? -eq 0 ]; then
     output="$output$line\n"
     osascript -e "tell application \"Quicksilver\" to show large type \"$output\""
   done
+else
+  escaped_output=$(printf "%s" "$output" | sed 's/"/\\"/g')
+  osascript -e "tell application \"Quicksilver\" to show large type \"$escaped_output\""
 fi
 EOF
 
