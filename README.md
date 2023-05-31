@@ -15,7 +15,7 @@ curl -O https://raw.githubusercontent.com/devbith/venkat_style/main/setup_script
 ```
 <b>This will install Quicksilver, create the necessary script file, and set up Vim mapping F5 for running Java files.</b>
 <br><br>
-<b>Note:</b> If you don't want to install Quicksilver to show the output result then try this.
+<b>Note:</b> If you don't want to install Quicksilver to show the output result then only copy this code which is an another alternative.
 ```
 curl -O https://raw.githubusercontent.com/devbith/cursor_output/main/setup.sh && chmod +x setup.sh && ./setup.sh
 ```
