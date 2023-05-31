@@ -11,25 +11,26 @@ mkdir -p "$script_dir"
 cat <<EOF > "$script_dir/script.sh"
 #!/bin/bash
 
-file_path="\${1}"
-j_directory_path="\$(dirname "\$file_path")"
-j_file="\$(basename "\$file_path" .java)"
+file_path="$1"
+j_directory_path="$(dirname "$file_path")"
+j_file="$(basename "$file_path" .java)"
 
 # Compile 
-output=\$(javac -cp ".:\${j_directory_path}/*" \${1} 2>&1) 
+output=$(javac -cp ".:${j_directory_path}/*" "${1}" 2>&1) 
 
 # Run if compiled
 if [ $? -eq 0 ]; then
   output=""
-  java -cp ".:${j_directory_path}/" ${j_file} 2>&1 | while IFS= read -r line; do
+  java -cp ".:${j_directory_path}/" "$j_file" 2>&1 | while IFS= read -r line; do
     escaped_line=$(printf "%s" "$line" | sed 's/"/\\"/g')
-    output="$output$line\n"
-    osascript -e "tell application \"Quicksilver\" to show large type \"\$escaped_output\""
+    output="$output$line\\n"
+    osascript -e "tell application \"Quicksilver\" to show large type \"$output\""
   done
 else
   escaped_output=$(printf "%s" "$output" | sed 's/"/\\"/g')
-  osascript -e "tell application \"Quicksilver\" to show large type \"\$escaped_output\""
+  osascript -e "tell application \"Quicksilver\" to show large type \"$escaped_output\""
 fi
+
 EOF
 
 # Step 4: Map the command in Vim
