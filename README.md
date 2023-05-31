@@ -3,18 +3,22 @@
 This repository configuration script that enables to execute and observe the output of Java files in the style of <a href="https://www.youtube.com/watch?v=yTuwi--LFsM">Dr. Venkat Subramaniam</a>.
 
 
-The script automates the installation of Quicksilver, a tool that facilitates displaying text in a floating window. Additionally, it creates a convenient setup for compiling and executing Java code, presenting the output in a visually appealing format similar to Dr. Venkat's presentation style.
+The script automates the installation of Quicksilver, a tool that facilitates displaying text in a floating window. Additionally, it creates a convenient setup for compiling and executing Java code, presenting the output in a visually appealing format similar to Dr. Venkat's presentation style. 
 
 
 ## Setup
 
 1. Open Terminal, copy and run the following code:
 
-   ```bash
-    curl -O https://raw.githubusercontent.com/devbith/venkat_style/main/setup_script.sh && chmod +x setup_script.sh && ./setup_script.sh
-   
-This will install Quicksilver, create the necessary script file, and set up Vim mapping F5 for running Java files.
-
+ ```
+curl -O https://raw.githubusercontent.com/devbith/venkat_style/main/setup_script.sh && chmod +x setup_script.sh && ./setup_script.sh
+```
+<b>This will install Quicksilver, create the necessary script file, and set up Vim mapping F5 for running Java files.</b>
+<br><br>
+<b>Note:</b> If you don't want to install Quicksilver to show the output result then try this.
+```
+curl -O https://raw.githubusercontent.com/devbith/cursor_output/main/setup.sh && chmod +x setup.sh && ./setup.sh
+```
 ## Usage
 
 
